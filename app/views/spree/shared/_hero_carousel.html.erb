@@ -1,0 +1,38 @@
+<% unless @hero_carousel.nil? || @hero_carousel.hero_carousel_items.empty? %>
+    <% #= debug @hero_carousel.hero_carousel_items %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="hero-owl owl-carousel" id="owl-home-hero">
+
+          <% @hero_carousel.hero_carousel_items.each do |item| %>
+              <div class="hero-slide-item">
+                <div class="slide-img">
+                  <a href="<%= item.link %>">
+                    <picture>
+                      <source srcset="<%= item.small_image %>" media="(max-width: 768px)">
+                      <img class="img-responsive" srcset="<%= item.large_image.url(:large) %>" alt="">
+                    </picture>
+                  </a>
+                </div>
+                <% unless item.html.blank? %>
+                    <div class="cool-box">
+                      <div class="background-overlay"></div>
+                      <%= item.html.html_safe %>
+                    </div>
+                <% end %>
+              </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#owl-home-hero').owlCarousel({
+            singleItem: true,
+            autoPlay: 600000,
+            stopOnHover: true
+        });
+    </script>
+<% end %>
+

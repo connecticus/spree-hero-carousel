@@ -1,0 +1,14 @@
+<%= render partial: 'spree/admin/shared/error_messages', locals: {target: @hero_carousel} %>
+
+<% content_for :page_title do %>
+    <%= Spree.t(:new_hero_carousel) %>
+<% end %>
+
+<%= form_for [:admin, @hero_carousel] do |f| %>
+    <fieldset data-hook="new_hero_carousel">
+      <%= render partial: 'form', locals: {f: f} %>
+      <div class="form-actions">
+        <%= render partial: 'spree/admin/shared/new_resource_links' %>
+      </div>
+    </fieldset>
+<% end %>

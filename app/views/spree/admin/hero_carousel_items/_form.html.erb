@@ -1,0 +1,44 @@
+<% #= debug @hero_carousel_item %>
+
+<%= f.hidden_field :hero_carousel_id, {:value => @hero_carousel.id} %>
+
+<%= f.field_container :large_image, class: ['form-group'] do %>
+    <% unless @hero_carousel_item.large_image_file_name.nil? %>
+        <div style="margin-bottom: 10px">
+          <%= image_tag @hero_carousel_item.large_image.url(:large), :style => 'width:100%' %>
+        </div>
+    <% end %>
+
+    <%= f.label :large_image, Spree.t(:large_image) %> <span class="required">*</span>
+    <%= f.file_field :large_image, :class => 'form-control', :required => @hero_carousel_item.large_image_file_name.nil? %>
+    <%= f.error_message_on :large_image %>
+<% end %>
+
+<%= f.field_container :small_image, class: ['form-group'] do %>
+    <% unless @hero_carousel_item.small_image_file_name.nil? %>
+        <div style="margin-bottom: 10px">
+          <%= image_tag @hero_carousel_item.small_image, :style => 'width:100%' %>
+        </div>
+    <% end %>
+
+    <%= f.label :small_image, Spree.t(:small_image) %> <span class="required">*</span>
+    <%= f.file_field :small_image, :class => 'form-control', :required => @hero_carousel_item.small_image_file_name.nil? %>
+    <%= f.error_message_on :small_image %>
+<% end %>
+
+<%= f.field_container :link, class: ['form-group'] do %>
+    <%= f.label :link, Spree.t(:link) %>
+    <%= f.text_field :link, :class => 'form-control', :required => true %>
+    <%= f.error_message_on :link %>
+<% end %>
+
+<%= f.field_container :html, class: ['form-group'] do %>
+    <%= f.label :html, Spree.t(:html) %>
+    <%= f.text_area :html, :class => 'form-control' %>
+<% end %>
+
+<%= f.field_container :active, class: ['form-group'] do %>
+    <%= f.label :active, Spree.t(:active) %> <span class="required">*</span>
+    <%= f.check_box :active, :class => 'form-control' %>
+    <%= f.error_message_on :active %>
+<% end %>

@@ -1,0 +1,13 @@
+<% content_for :page_title do %>
+    <%= link_to Spree.t(:hero_carousels), spree.admin_hero_carousels_path %> /
+    <%= @hero_carousel.name %>
+<% end %>
+
+<% content_for :sidebar do %>
+    <ul class="nav nav-pills nav-stacked" data-hook="admin_hero_carousel_tabs">
+      <%= content_tag :li, class: ('active' if current == :hero_carousel_items) do %>
+          <%= link_to_with_icon 'picture', Spree.t(:hero_carousel_items), spree.admin_hero_carousel_hero_carousel_items_url(@hero_carousel) %>
+      <% end if can?(:admin, Spree::HeroCarouselItem) %>
+    </ul>
+<% end %>
+

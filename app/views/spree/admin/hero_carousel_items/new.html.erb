@@ -1,0 +1,11 @@
+<%= render partial: 'spree/admin/shared/hero_carousel_tabs', locals: {current: :hero_carousel_items} %>
+
+<h2 style="font-size: 20px;"><%= Spree.t(:new_hero_carousel_item) %></h2>
+
+<%= form_for [:admin, @hero_carousel, @hero_carousel_item], html: { multipart: true } do |f| %>
+    <fieldset data-hook="new_hero_carousel_item">
+      <%= render partial: 'form', locals: {f: f} %>
+
+      <%= render partial: 'spree/admin/shared/new_resource_links', locals: {collection_url: spree.edit_admin_hero_carousel_url(@hero_carousel) } %>
+    </fieldset>
+<% end %>

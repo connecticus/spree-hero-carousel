@@ -1,5 +1,13 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  spree:
+    hero_carousel: 'Hero Carousel'
+    hero_carousels: 'Hero Carousels'
+    new_hero_carousel: 'New Hero Carousel'
+    editing_hero_carousel: 'Editing Hero Carousel'
+    page_url: 'Page URL'
+    active: 'Active'
+    hero_carousel_item: 'Hero Carousel Item'
+    hero_carousel_items: 'Hero Carousel Items'
+    new_hero_carousel_item: 'New Hero Carousel Item'
+    editing_hero_carousel_item: 'Editing Hero Carousel Item'
+    link: 'Link'
