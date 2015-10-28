@@ -43,6 +43,8 @@
                 <%= Spree.t(:html) %>
               </th>
 
+              <th><%= Spree.t(:active) %></th>
+
               <th class="actions"></th>
             </tr>
         </thead>
@@ -55,14 +57,21 @@
                     <span class="icon icon-move handle"></span>
                 <% end %>
               </td>
+
               <td class="large-image">
                 <%= image_tag item.large_image.url(:large) %>
               </td>
+
               <td class="small-image">
                 <%= image_tag item.small_image.url(:small) %>
               </td>
+
               <td class="link"><%= item.link %></td>
+
               <td class="html"><%= item.html %></td>
+
+              <td><% if item.active? %><span style="color: green;">✔</span><% else %><span style="color: red;">✘</span><% end %></td>
+
               <td class="actions actions-2 text-right">
                 <%= link_to_with_icon('edit', Spree.t(:edit), spree.edit_admin_hero_carousel_hero_carousel_item_url(@hero_carousel, item), class: 'btn btn-primary btn-sm', no_text: true, data: { action: 'edit' }) if can? :edit, item %>
                 <%= link_to_delete(item, { url: spree.admin_hero_carousel_hero_carousel_item_url(@hero_carousel, item), no_text: true }) if can? :destroy, item %>
