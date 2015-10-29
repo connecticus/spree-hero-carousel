@@ -23,7 +23,7 @@
             <td class="id"><%= hero_carousel.id %></td>
             <td class="name"><%= hero_carousel.name %></td>
             <td class="page_url"><%= hero_carousel.page_url %></td>
-            <td class="active"><% if hero_carousel.active? %><span style="color: green;">✔</span><% else %><span style="color: red;">✘</span><% end %></td>
+            <td class="status"><% if hero_carousel.active? %><span style="color: green;">✔</span><% else %><span style="color: red;">✘</span><% end %></td>
             <td class="actions actions-2 text-right">
               <%= link_to_edit(hero_carousel, :no_text => true) %>
               <%= link_to_delete(hero_carousel, :no_text => true) %>
