@@ -9,7 +9,7 @@
                 <div class="slide-img">
                   <a href="<%= item.link %>">
                     <picture>
-                      <source srcset="<%= item.small_image %>" media="(max-width: 768px)">
+                      <source srcset="<%= item.small_image.url(:small) %>" media="(max-width: 768px)">
                       <img class="img-responsive" srcset="<%= item.large_image.url(:large) %>" alt="">
                     </picture>
                   </a>
