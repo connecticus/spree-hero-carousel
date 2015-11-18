@@ -5,22 +5,24 @@
         <div class="hero-owl owl-carousel" id="owl-home-hero">
 
           <% @hero_carousel.hero_carousel_items.each do |item| %>
-              <div class="hero-slide-item">
-                <div class="slide-img">
-                  <a href="<%= item.link %>">
-                    <picture>
-                      <source srcset="<%= item.small_image.url(:small) %>" media="(max-width: 768px)">
-                      <img class="img-responsive" srcset="<%= item.large_image.url(:large) %>" alt="">
-                    </picture>
-                  </a>
+              <% if item.active %>
+                <div class="hero-slide-item">
+                  <div class="slide-img">
+                    <a href="<%= item.link %>">
+                      <picture>
+                        <source srcset="<%= item.small_image.url(:small) %>" media="(max-width: 768px)">
+                        <img class="img-responsive" srcset="<%= item.large_image.url(:large) %>" alt="">
+                      </picture>
+                    </a>
+                  </div>
+                  <% unless item.html.blank? %>
+                      <div class="cool-box">
+                        <div class="background-overlay"></div>
+                        <%= item.html.html_safe %>
+                      </div>
+                  <% end %>
                 </div>
-                <% unless item.html.blank? %>
-                    <div class="cool-box">
-                      <div class="background-overlay"></div>
-                      <%= item.html.html_safe %>
-                    </div>
-                <% end %>
-              </div>
+              <% end %>
           <% end %>
 
         </div>
