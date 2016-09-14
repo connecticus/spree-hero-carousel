@@ -6,7 +6,7 @@ module Spree
 
     default_scope {order('position')}
 
-    has_attached_file :large_image, styles: {large: '1175x500!'}
+    has_attached_file :large_image, styles: {large: '1140x485!'}
     has_attached_file :small_image , styles: {small: '615x470!'}
 
     validates_attachment_content_type :large_image, content_type: /\Aimage\/.*\Z/
