@@ -9,7 +9,7 @@ module Spree
     has_attached_file :large_image,
       styles: {large: '1140x485!'},
       convert_options: { all: '-colorspace sRGB -quality 70'}
-    has_attached_file :small_image ,
+    has_attached_file :small_image,
       styles: {small: '615x470!'},
       convert_options: { all: '-colorspace sRGB -quality 70'}
 
