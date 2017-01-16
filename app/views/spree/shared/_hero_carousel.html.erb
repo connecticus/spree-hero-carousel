@@ -15,12 +15,6 @@
                       </picture>
                     </a>
                   </div>
-                  <% unless item.html.blank? %>
-                      <div class="cool-box">
-                        <div class="background-overlay"></div>
-                        <%= item.html.html_safe %>
-                      </div>
-                  <% end %>
                 </div>
               <% end %>
           <% end %>
@@ -38,4 +32,3 @@
         });
     </script>
 <% end %>
-
