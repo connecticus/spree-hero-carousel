@@ -8,10 +8,14 @@ module Spree
 
     has_attached_file :large_image,
       styles: {large: '1140x485!'},
-      convert_options: { all: '-colorspace sRGB -quality 70'}
+      convert_options: { all: '-colorspace sRGB -quality 70'},
+      url: ':s3_alias_url',
+      s3_host_alias: 'd2jd5cd93sjelr.cloudfront.net'
     has_attached_file :small_image,
       styles: {small: '615x470!'},
-      convert_options: { all: '-colorspace sRGB -quality 70'}
+      convert_options: { all: '-colorspace sRGB -quality 70'},
+      url: ':s3_alias_url',
+      s3_host_alias: 'd2jd5cd93sjelr.cloudfront.net'
 
     validates_attachment_content_type :large_image, content_type: /\Aimage\/.*\Z/
     validates_attachment_content_type :small_image, content_type: /\Aimage\/.*\Z/
