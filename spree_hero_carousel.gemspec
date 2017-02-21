@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_hero_carousel'
-  s.version     = '0.0.4'
+  s.version     = '0.0.8'
   s.summary     = 'Carousel with large and small images, and optional free-form HTML, for each position'
   s.description = 'Carousel with large and small images, and optional free-form HTML, for each position'
   s.required_ruby_version = '>= 2.0.0'

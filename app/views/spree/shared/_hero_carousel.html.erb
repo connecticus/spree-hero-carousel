@@ -15,12 +15,6 @@
                       </picture>
                     </a>
                   </div>
-                  <% unless item.html.blank? %>
-                      <div class="cool-box">
-                        <div class="background-overlay"></div>
-                        <%= item.html.html_safe %>
-                      </div>
-                  <% end %>
                 </div>
               <% end %>
           <% end %>
@@ -32,9 +26,9 @@
     <script type="text/javascript">
         $('#owl-home-hero').owlCarousel({
             singleItem: true,
-            autoPlay: 600000,
-            stopOnHover: true
+            autoPlay: 4000,
+            stopOnHover: true,
+            paginationSpeed: 1500
         });
     </script>
 <% end %>
-
