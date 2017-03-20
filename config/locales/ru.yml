@@ -1,0 +1,13 @@
+ru:
+  spree:
+    hero_carousel: 'Мега-слайдер'
+    hero_carousels: 'Мега-слайдеры'
+    new_hero_carousel: 'Добавить мега-слайдер'
+    editing_hero_carousel: 'Редактировать мега-слайдер'
+    page_url: 'URL страницы'
+    active: 'активно'
+    hero_carousel_item: 'Мега-слайд'
+    hero_carousel_items: 'Мега-слайды'
+    new_hero_carousel_item: 'Добавить мега-слайд'
+    editing_hero_carousel_item: 'Редактировать мега-слайд'
+    link: 'Ссылка'
